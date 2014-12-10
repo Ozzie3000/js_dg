@@ -3,9 +3,19 @@
 <head>
 <title>JS and jQuery | Date time</title>
 <meta charset="utf-8">
-<meta name="description" content="HTML5 demos" />
+<meta name="description" content="HTML5, JS demos" />
 <script type="text/javascript">
-	var first_day = new Date()
+	function doc_ready(){
+		first_day = new Date(2015, 0, 1);  //first day 1st month 2015
+		document.getElementById("date_1").innerHTML = first_day;
+
+
+
+
+
+	}  // my version of doc ready func in jQuery
+
+	setTimeout(function(){doc_ready()}, 2000);  
 </script>
 <link rel="stylesheet" type="text/css" href="stylesheets/main1.css"></link>
 <style type="text/css"></style>
@@ -15,7 +25,8 @@
 	<br /><br />
   <h1>Dates and Times with JS</h1>
 
-
+  <p>What day will January 1st 2015 be???</p>
+  <div id="date_1"></div>
 
 
 <script src="https://code.jquery.com/jquery-2.1.1.js"></script>
