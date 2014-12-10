@@ -8,19 +8,31 @@
 	function doc_ready(){
 		function short_cut(var_x, stuff){
 			document.getElementById(var_x).innerHTML = stuff;
-		}
-
-		first_day = new Date(2015, 0, 1);  //first day 1st month 2015
-		document.getElementById("date_1").innerHTML = first_day;
+		}  // so i don't have to type 
 
 		now_now = new Date();
-		document.getElementById("today").innerHTML = now_now;
+/*
+		first_day = new Date(2015, 0, 1);  //first day 1st month 2015
+		document.getElementById("jan_1").innerHTML = first_day;
 
-		short_cut("yr", now_now.getFullYear());
+		now_now = new Date();
+		document.getElementById("today_1").innerHTML = now_now;
+  */   //  too long so made my own func
+
+		short_cut("jan_1", new Date(2015, 0, 1));
+		short_cut("today_1", now_now);
+		short_cut("yr_1", now_now.getFullYear());
+		short_cut("mon_1", now_now.getMonth());
+		short_cut("date_1", now_now.get);
+		short_cut("day_1", now_now.get);
+		short_cut("hour_1", now_now.get);
+		short_cut("utc_1", now_now.get);
+		
+		
 
 	}  // my version of doc ready func in jQuery
 
-	setTimeout(function(){doc_ready()}, 1500);  
+	setTimeout(function(){doc_ready()}, 1000);  
 </script>
 <link rel="stylesheet" type="text/css" href="stylesheets/main1.css"></link>
 <style type="text/css">
@@ -33,13 +45,28 @@
   <h1>Dates and Times with JS</h1>
 
   <p>What day will January 1st 2015 be???</p>
-  <div id="date_1" class="answers"></div>
+  <div id="jan_1" class="answers"></div>
 
   <p>Today? As is right this second right now?</p>
-  <div id="today" class="answers"></div>
+  <div id="today_1" class="answers"></div>
 
   <p>What year is it?</p>
-  <div id="yr" class="answers"></div>
+  <div id="yr_1" class="answers"></div>
+
+  <p>What month is it?</p>
+  <div id="mon_1" class="answers"></div>
+
+  <p>What date is it?</p>
+  <div id="date_1" class="answers"></div>
+
+  <p>What day is it?</p>
+  <div id="day_1" class="answers"></div>
+
+  <p>What hour is it?</p>
+  <div id="hour_1" class="answers"></div>
+
+  <p>UTC hours whatever that is?</p>
+  <div id="utc_1" class="answers"></div>
 
 
 <script src="https://code.jquery.com/jquery-2.1.1.js"></script>
