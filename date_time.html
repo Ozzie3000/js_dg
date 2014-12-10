@@ -6,19 +6,26 @@
 <meta name="description" content="HTML5, JS demos" />
 <script type="text/javascript">
 	function doc_ready(){
+		function short_cut(var_x, stuff){
+			document.getElementById(var_x).innerHTML = stuff;
+		}
+
 		first_day = new Date(2015, 0, 1);  //first day 1st month 2015
 		document.getElementById("date_1").innerHTML = first_day;
 
+		now_now = new Date();
+		document.getElementById("today").innerHTML = now_now;
 
-
-
+		short_cut("yr", now_now.getFullYear());
 
 	}  // my version of doc ready func in jQuery
 
-	setTimeout(function(){doc_ready()}, 2000);  
+	setTimeout(function(){doc_ready()}, 1500);  
 </script>
 <link rel="stylesheet" type="text/css" href="stylesheets/main1.css"></link>
-<style type="text/css"></style>
+<style type="text/css">
+	.answers{ color: blue;}
+</style>
 </head>
 <body>
 	<input type="button" id="submit" class="btn" value="Refreshness" onclick="location.reload();" />
@@ -26,7 +33,13 @@
   <h1>Dates and Times with JS</h1>
 
   <p>What day will January 1st 2015 be???</p>
-  <div id="date_1"></div>
+  <div id="date_1" class="answers"></div>
+
+  <p>Today? As is right this second right now?</p>
+  <div id="today" class="answers"></div>
+
+  <p>What year is it?</p>
+  <div id="yr" class="answers"></div>
 
 
 <script src="https://code.jquery.com/jquery-2.1.1.js"></script>
