@@ -5,6 +5,12 @@
 <meta charset="utf-8">
 <meta name="description" content="HTML5 demos" />
 <script type="text/javascript">
+	console.log("two \nlines");
+
+	console.log("line one\ line two\ line three");
+	console.log("line one\
+		line two\
+		line three");
 </script>
 <link rel="stylesheet" type="text/css" href="stylesheets/main1.css"></link>
 <style type="text/css"></style>
@@ -14,8 +20,23 @@
 	<br /><br />
   <h1>string literals</h1>
 
+  <p>console.log("two \nlines"); <br /> breaks it up into two lines</p>
 
+  <p>document.write("two \nlines"); <br />does not: -->
+  <script type="text/javascript">
+  	document.write("two \n lines");
+  </script>
+  </p>
 
+  <hr>
+
+  <p>console.log("line one\ line two\ line three\ ");</p>
+
+  <script type="text/javascript">
+  	document.write("line one\
+  		line two\
+  		line three");
+  </script>
 
 <script src="https://code.jquery.com/jquery-2.1.1.js"></script>
 <script>
