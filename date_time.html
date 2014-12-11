@@ -27,8 +27,13 @@
 		short_cut("day_1", now_now.getDay());
 		short_cut("hour_1", now_now.getHours());
 		short_cut("utc_1", now_now.getUTCHours());
-		
-		
+
+		short_cut("to_string", now_now.toString());
+		short_cut("utc_string", now_now.toUTCString());
+		short_cut("locale_date", now_now.toLocaleDateString());
+		short_cut("locale_string", now_now.toLocaleTimeString());
+		short_cut("iso_string", now_now.toISOString());
+	
 
 	}  // my version of doc ready func in jQuery
 
@@ -68,6 +73,22 @@
   <p>UTC hours whatever that is?</p>
   <div id="utc_1" class="answers"></div>
 
+  <hr>
+
+  <p>to string</p>
+  <div id="to_string" class="answers"></div>
+
+  <p>to utc string</p>
+  <div id="utc_string" class="answers"></div>
+
+  <p>to locale time date string</p>
+  <div id="locale_date" class="answers"></div>
+
+  <p>to locale time string</p>
+  <div id="locale_string" class="answers"></div>
+
+  <p>to iso string</p>
+  <div id="iso_string" class="answers"></div>
 
 <script src="https://code.jquery.com/jquery-2.1.1.js"></script>
 <script>
