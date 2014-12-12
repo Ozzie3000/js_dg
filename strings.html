@@ -14,13 +14,15 @@
 </style>
 </head>
 <body>
-	<input type="button" id="submit" class="btn" value="Refreshness" onclick="location.reload();" />
+	<input type="button" id="rere" class="btn" value="Refreshness" onclick="location.reload();" />
 	<br /><br />
   <h1>working with strings</h1>
 
-  Give me a string: <input type="text" /><input type="submit" id="submit"> 
+  Give me a string: <input type="text" id="answer"/><input type="submit" id="submit"> 
 
+  <ol id="list">
 
+  </ol>
 <script src="https://code.jquery.com/jquery-2.1.1.js"></script>
 <script type="text/javascript">
 
@@ -30,7 +32,20 @@
 	$(document).ready(function(){
 		$("#submit").on("click", function(){
 			var str = $("#answer").val();
-			alert(str);
+			if(str == ""){
+				alert("please type something in the box");
+			}else{
+				$("#answer").val("");  //removes text so 
+			$("#list").append("<li>" + str.charAt(0) + "</li>");
+			$("#list").append("<li>" + str.charAt(str.length-1) + "</li>");
+			$("#list").append("<li>" + str.substring(1,4) + "</li>");
+			$("#list").append("<li>" + str.slice(1,4) + "</li>");
+			$("#list").append("<li>" + str.slice(-3) + "</li>");
+			$("#list").append("<li>" + str.indexOf("a") + "</li>");
+			$("#list").append("<li>" + str.lastIndexOf("a") + "</li>");
+			$("#list").append("<li>" + str.indexOf("a", 3) + "</li>");
+			};
+			
 		})
 	}); //end doc ready
 </script>
