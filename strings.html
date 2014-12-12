@@ -35,15 +35,16 @@
 			if(str == ""){
 				alert("please type something in the box");
 			}else{
-				$("#answer").val("");  //removes text so 
-			$("#list").append("<li>" + str.charAt(0) + "</li>");
-			$("#list").append("<li>" + str.charAt(str.length-1) + "</li>");
-			$("#list").append("<li>" + str.substring(1,4) + "</li>");
-			$("#list").append("<li>" + str.slice(1,4) + "</li>");
-			$("#list").append("<li>" + str.slice(-3) + "</li>");
-			$("#list").append("<li>" + str.indexOf("a") + "</li>");
-			$("#list").append("<li>" + str.lastIndexOf("a") + "</li>");
-			$("#list").append("<li>" + str.indexOf("a", 3) + "</li>");
+				$("#answer").val("");  //removes text so
+				$("#list").append("<li>" + "Your string : " +str+ "</li>");
+				$("#list").append("<li>" + "str.charAt(0) "+ str.charAt(0) + "</li>");
+				$("#list").append("<li>" + str.charAt(str.length-1) + "</li>");
+				$("#list").append("<li>" + str.substring(1,4) + "</li>");
+				$("#list").append("<li>" + str.slice(1,4) + "</li>");
+				$("#list").append("<li>" + str.slice(-3) + "</li>");
+				$("#list").append("<li>" + str.indexOf("a") + "</li>");
+				$("#list").append("<li>" + str.lastIndexOf("a") + "</li>");
+				$("#list").append("<li>" + str.indexOf("a", 3) + "</li>");
 			};
 			
 		})
