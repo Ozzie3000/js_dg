@@ -48,6 +48,25 @@
 				$("#list").append("<li>" + "str.indexOf('a') = " + str.indexOf("a") + "</li>");
 				$("#list").append("<li>" + 'str.lastIndexOf("a") = ' + str.lastIndexOf("a") + "</li>");
 				$("#list").append("<li>" + 'str.indexOf("a", 3) = ' + str.indexOf("a", 3) + "</li>");
+				$("#list").append("<li>" + 'str.split(", ") = ' + str.split(", ") + "</li>");
+				$("#list").append("<li>" + 'str.replace("a", "A") = ' + str.replace("a", "A") + "</li>");
+				$("#list").append("<li>" + 'str.toUpperCase() = ' + str.toUpperCase() + "</li>");
+
+				console.log(
+					str  +"\n" +
+					str.charAt(0) +"\n" +
+					str.charAt(str.length-1) +"\n" +
+					str.substring(1,4) +"\n" +
+					str.slice(1,4) +"\n" +
+					str.slice(-3) +"\n" +
+					str.indexOf("a") +"\n" +
+					str.lastIndexOf("a") +"\n" +
+					str.indexOf("a", 3) +"\n" +
+					str.split(", ") +"\n" +
+					str.replace("a", "A") +"\n" +
+					str.toUpperCase()
+					
+				)
 			};
 			
 		})
