@@ -8,6 +8,7 @@
 </script>
 <link rel="stylesheet" type="text/css" href="stylesheets/main1.css"></link>
 <style type="text/css">
+	body{ padding: 2px 12px;}
 	#intro{ text-align: center;}
 </style>
 </head>
@@ -25,9 +26,9 @@
   </ol>
   	<li>var sample_1 = "testing: 1, 2 ,3";  //our sample text</li>
   	<li>var pattern = /\d+/g  //matches all instances of one or more digits</li>
-  	<li>pattern.test(sample_1)  //ture: a match exists</li>
-  	<li></li>
-  	<li></li>
+  	<li>pattern.test(sample_1)  //true: a match exists</li>
+  	<li>sample_1.search(pattern) //9: index where condition first validates to true</li>
+  	<li>sample_1.match(pattern) //=>["1", "2", "3"]; array of all matches</li>
   <ol>
 
   </ol>
