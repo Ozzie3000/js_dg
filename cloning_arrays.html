@@ -49,27 +49,30 @@
   <button id="compare">stuf</button>
 
 <script src="https://code.jquery.com/jquery-2.1.1.js"></script>
-<script>
-	$(document).ready(function(){
-    var a = [];
-    var b = [];
-    for (var i = 0; i < a.length; i++){ b[i] = a[i]; }
-
-    function myArrays(a,b){
+<script type="text/javascript">
+  function myArrays(a,b){
       if(a.length != b.length){
        alert("lengths do not match up");
         return false; 
       } 
       for(var i = 0; i < a.length; i++){
-        if(a[i] !== b[i]) return false;
-        alert("indexes do not match up");
-        return true;
+        if(a[i] !== b[i]){
+          alert("indexes do not match up");
+        }
         if(a[i] === b[i]){
           alert("indexes match up");
         }
       }
     }
+</script>
+<script>
+	$(document).ready(function(){
+    var a = new Array();
+    var b = new Array();
+    for (var i = 0; i < a.length; i++){ b[i] = a[i]; }
+
     
+
     $("#compare").on("click", function(){
       myArrays(a,b);
     });
