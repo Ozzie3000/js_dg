@@ -7,7 +7,17 @@
 <script type="text/javascript">
 </script>
 <link rel="stylesheet" type="text/css" href="stylesheets/main1.css"></link>
-<style type="text/css"></style>
+<style type="text/css">
+  #sp_1{
+    margin: 2px 10px 2px;
+  }
+  #sp_2{
+    margin: 2px 10px 2px;
+  }
+  #sp_3{
+    margin: 2px 10px 2px;
+  }
+</style>
 </head>
 <body>
 	<input type="button" id="rere" class="btn" value="Refreshness" onclick="location.reload();" />
@@ -15,8 +25,8 @@
   <h1>mutable object references and immutable primitive values</h1>
 
   <ol>cloning arrays
-    <li>var a = []</li>
-    <li>var b = []</li>
+    <li>var array_a = []</li>
+    <li>var array_b = []</li>
     <li>for(var i = 0 i < a.length; i++){ b[i] = a[i]; }</li>
   </ol>
 
@@ -31,10 +41,16 @@
     }
   </p>
 
+  <span id="sp_1">Array_a input 1: <input type="text" id="array_a"></span>
+  <span id="sp_2">Array_a input 2: <input type="text" id="array_a"></span>
+  <span id="sp_3">Array_a input 3: <input type="text" id="array_a"></span>
 <script src="https://code.jquery.com/jquery-2.1.1.js"></script>
 <script>
 	$(document).ready(function(){
-
+    var a = [];
+    var b = [];
+    for(var i = 0 i < a.length; i++){ b[i] = a[i]; }
+    $("stuff")
 	}); //end doc ready
 </script>
 </body>
