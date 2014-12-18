@@ -44,13 +44,37 @@
   <span id="sp_1">Array_a input 1: <input type="text" id="array_a"></span>
   <span id="sp_2">Array_a input 2: <input type="text" id="array_a"></span>
   <span id="sp_3">Array_a input 3: <input type="text" id="array_a"></span>
+  <br /><br />
+
+  <button id="compare">stuf</button>
+
 <script src="https://code.jquery.com/jquery-2.1.1.js"></script>
 <script>
 	$(document).ready(function(){
     var a = [];
     var b = [];
-    for(var i = 0 i < a.length; i++){ b[i] = a[i]; }
-    $("stuff")
+    for (var i = 0; i < a.length; i++){ b[i] = a[i]; }
+
+    function myArrays(a,b){
+      if(a.length != b.length){
+       alert("lengths do not match up");
+        return false; 
+      } 
+      for(var i = 0; i < a.length; i++){
+        if(a[i] !== b[i]) return false;
+        alert("indexes do not match up");
+        return true;
+        if(a[i] === b[i]){
+          alert("indexes match up");
+        }
+      }
+    }
+    
+    $("#compare").on("click", function(){
+      myArrays(a,b);
+    });
+
+
 	}); //end doc ready
 </script>
 </body>
