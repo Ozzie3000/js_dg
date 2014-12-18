@@ -25,8 +25,8 @@
   <h1>mutable object references and immutable primitive values</h1>
 
   <ol>cloning arrays
-    <li>var array_a = [1,2,3]</li>
-    <li>var array_b = []</li>
+    <li>var array_a = [1,2,3];</li>
+    <li>var array_b = [];</li>
     <li>for(var i = 0; i < a.length; i++){ b[i] = a[i]; }</li>
   </ol>
 
@@ -46,6 +46,8 @@
   <button id="compare" onclick="copy_arrays()">Copy arrays</button>
   <br />
   <button id="compare" onclick="my_arrays(a,b)">compare arrays</button>
+  <br />
+  <button id="compare" onclick="equiv(a,b)">a == b  ???</button>
 
 <script src="https://code.jquery.com/jquery-2.1.1.js"></script>
 <script type="text/javascript">
@@ -65,11 +67,19 @@
       } 
       for(var i = 0; i < a.length; i++){
         if(a[i] !== b[i]){
-          alert("indexes do not match up");
+          alert("index " +  i + " does not match up");
         }
         if(a[i] === b[i]){
-          alert("indexes match up");
+          alert("indexes " +  i  + " matches up");
         }
+      }
+    }
+
+    function equiv(a,b){
+      if(a == b){
+        alert("Equivalent");
+      }else{
+        alert("Not equivalent.  Still two different arrays");
       }
     }
 </script>
