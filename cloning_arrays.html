@@ -25,15 +25,15 @@
   <h1>mutable object references and immutable primitive values</h1>
 
   <ol>cloning arrays
-    <li>var array_a = []</li>
+    <li>var array_a = [1,2,3]</li>
     <li>var array_b = []</li>
-    <li>for(var i = 0 i < a.length; i++){ b[i] = a[i]; }</li>
+    <li>for(var i = 0; i < a.length; i++){ b[i] = a[i]; }</li>
   </ol>
 
-  <p>compare</p>
+  <p>compare function: </p>
 
   <p>
-    function myArrays(a,b){
+    function my_arrays(a,b){
       if(a.length != be.length) return false;
       for(var i = 0; i< a.length; i++)
         if(a[i] !== b[i]) return false;
@@ -41,16 +41,24 @@
     }
   </p>
 
-  <span id="sp_1">Array_a input 1: <input type="text" id="array_a"></span>
-  <span id="sp_2">Array_a input 2: <input type="text" id="array_a"></span>
-  <span id="sp_3">Array_a input 3: <input type="text" id="array_a"></span>
-  <br /><br />
-
-  <button id="compare">stuf</button>
+  <button id="compare" onclick="my_arrays(a,b)">compare arrays</button>
+  <br />
+  <button id="compare" onclick="copy_arrays()">Copy arrays</button>
+  <br />
+  <button id="compare" onclick="my_arrays(a,b)">compare arrays</button>
 
 <script src="https://code.jquery.com/jquery-2.1.1.js"></script>
 <script type="text/javascript">
-  function myArrays(a,b){
+  a = [1,2,3];
+  b = [];
+
+  function copy_arrays(){
+    for(var i = 0; i < a.length; i++){
+      b[i] = a[i];
+    }
+  }
+
+  function my_arrays(a,b){
       if(a.length != b.length){
        alert("lengths do not match up");
         return false; 
@@ -73,8 +81,8 @@
 
     
 
-    $("#compare").on("click", function(){
-      myArrays(a,b);
+    $("compare").on("click", function(){
+      my_arrays(a,b);
     });
 
 
