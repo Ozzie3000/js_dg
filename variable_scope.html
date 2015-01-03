@@ -13,9 +13,12 @@
 		alert("now we change scope_1 = scope_2 and see what we get");
 
 		scope_1 = "local";
-		alert("this is now scope_1: " + scope_1);
+		alert("this is now scope_1: " + scope_1 + " changed because of the function");
+		alert("this is now scope_2: " + scope_2);
 	}
 	checkscope();
+	alert("scope_1 : " + scope_1);
+	alert("scope_2 : " + scope_2);
 </script>
 <link rel="stylesheet" type="text/css" href="stylesheets/main1.css"></link>
 <style type="text/css"></style>
