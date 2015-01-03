@@ -10,7 +10,12 @@
 		var scope_2 = "local"
 		alert("this is scope 1: "+ scope_1);
 		alert("this is scope 2: " + scope_2);
+		alert("now we change scope_1 = scope_2 and see what we get");
+
+		scope_1 = "local";
+		alert("this is now scope_1: " + scope_1);
 	}
+	checkscope();
 </script>
 <link rel="stylesheet" type="text/css" href="stylesheets/main1.css"></link>
 <style type="text/css"></style>
