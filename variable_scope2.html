@@ -5,6 +5,14 @@
 <meta charset="utf-8">
 <meta name="description" content="HTML5, JS, jquery demos" />
 <script type="text/javascript">
+	scope_1 = "global";
+	function checkscope2(){
+		scope_1 = 'local';
+		scope_2 = 'local';
+		return [scope_1, scope_2];
+	}
+	checkscope2();
+	
 </script>
 <link rel="stylesheet" type="text/css" href="stylesheets/main1.css"></link>
 <style type="text/css"></style>
