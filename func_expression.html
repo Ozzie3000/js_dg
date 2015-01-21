@@ -19,8 +19,8 @@
   <h1>function definition expressions</h1>
 
   <input id="squ1" type="text" placeholder="Give me a num and I'll square it">
-
-
+  <br /><br />
+  <span id="here">&nbsp;</span>
 <script src="https://code.jquery.com/jquery-2.1.1.js"></script>
 <script>
 	$(document).ready(function(){
@@ -29,6 +29,7 @@
 			console.log("innitial val: " + num1);
 			x = num1;
 			console.log("after func: " + square(x));
+			$("#here").append(square(x));
 		});
 	}); //end doc ready
 </script>
