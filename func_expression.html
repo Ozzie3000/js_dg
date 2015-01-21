@@ -8,6 +8,7 @@
 	var square = function(x){
 		return x*x;
 	}
+	
 </script>
 <link rel="stylesheet" type="text/css" href="stylesheets/main1.css"></link>
 <style type="text/css"></style>
@@ -17,13 +18,16 @@
 	<br /><br />
   <h1>function definition expressions</h1>
 
-
+  <input id="squ1" type="text" placeholder="Give me a num and I'll square it">
 
 
 <script src="https://code.jquery.com/jquery-2.1.1.js"></script>
 <script>
 	$(document).ready(function(){
-
+		$("#squ1").on("change", function(){
+			num1 = $(this).val();
+			console.log(num1);
+		});
 	}); //end doc ready
 </script>
 </body>
