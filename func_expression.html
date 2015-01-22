@@ -26,7 +26,7 @@
 	<br /><br />
   <h1>function definition expressions</h1>
 
-  <input id="squ1" type="text" placeholder="Give me a number and I'll square it" style="height:20px; width:240px;">
+  <input id="squ1" type="text" placeholder="Give me a number and I'll square it" style="height:20px; width:240px;" tabindex="1" title="hit tab">
   <br /><br />
   <div id="wrapper">
   	<span id="here">&nbsp;</span>
@@ -41,6 +41,8 @@
 			console.log("after func: " + square(x));
 			$("#here").append(square(x));
 		});
+
+		$("#squ1").focus();
 	}); //end doc ready
 </script>
 </body>
