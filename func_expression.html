@@ -28,8 +28,9 @@
 
   <input id="squ1" type="text" placeholder="Give me a number and I'll square it" style="height:20px; width:240px;" tabindex="1" title="hit tab">
   <br /><br />
-  <div id="wrapper">
-  	<span id="here" title="Answer appears here">&nbsp;</span>
+
+  <div id="wrapper" title="Answer appears here">
+  	<span id="here">&nbsp;</span>
   </div>
 <script src="https://code.jquery.com/jquery-2.1.1.js"></script>
 <script>
@@ -44,10 +45,13 @@
 
 		$("#squ1").focus();
 
-		$("#here").on("hover", function(){
-			$(this).attr("title");
-			console.log("test")
+/***
+		$("#wrapper").hover(function(){
+			alert($("#here").attr("title"));
+			console.log("test");
 		});
+***/
+
 	}); //end doc ready
 </script>
 </body>
