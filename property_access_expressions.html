@@ -24,7 +24,18 @@
 	<br /><br />
   <h1>Property Access expressions</h1>
 
-
+  <span>
+  	<ul>
+  		<li>var b = {x:1, y:{z:3}};  //object</li>
+  		<li>var a = [b,4,[5,6]];  //array that contains the object</li>
+  		<li>b.x  //= 1 ; //expression o with property x</li>
+  		<li>b.y.z // = 3 ; //property z of expression x.o</li>
+  		<li>b["x"] // = 1 ; //property x of object o</li>
+  		<li>a[1] // = 4 ; //element at index 1 of expression a</li>
+  		<li>a[2]["1"] // = 6 ; //element at index 1 of expression a[2]</li>
+  		<li>a[0].x // = 1 //property x of expression a[0]</li>
+  	</ul>
+  </span>
 
 
 <script src="https://code.jquery.com/jquery-2.1.1.js"></script>
