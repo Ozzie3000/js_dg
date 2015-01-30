@@ -67,8 +67,9 @@
 		$("#receiver").on("change", function(){
 			//console.log("test");
 			var holder = $("#receiver").val();
-			$("#here").html(holder);
-			console.log(stuff_5 + " hi");
+			holder = parseInt(holder);
+			$("#here").html(stuff_+holder);
+			//console.log(stuff_5 + " hi");
 		});
 
 	}); //end doc ready
