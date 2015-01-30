@@ -56,15 +56,20 @@
 
   	<label for="receiver">stuff_x</label>
   	<input type="text" id="receiver" placeholder="stuff_x" title="replace x with a number 1 to 6">
+  	<br /><br />
+
+  	<textarea id="here"></textarea>
   </div>
 
 <script src="https://code.jquery.com/jquery-2.1.1.js"></script>
 <script>
 	$(document).ready(function(){
-		$("#receiver").on("blur", function(){
-			console.log("test");
+		$("#receiver").on("change", function(){
+			//console.log("test");
+			var holder = $("#receiver").val();
+
 		});
-		
+
 	}); //end doc ready
 </script>
 </body>
