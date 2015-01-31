@@ -64,17 +64,22 @@
 <script src="https://code.jquery.com/jquery-2.1.1.js"></script>
 <script>
 	$(document).ready(function(){
+		var x;
 		$("#receiver").on("change", function(){
 			//console.log("test");
-			var holder = $("#receiver").val();
-			holder = parseInt(holder);
-			switch (holder){
-				case 1:
+			//var holder = $("#receiver").val();
+			//holder = parseInt(holder);
+			switch (x){
+				case "1":
 				console.log(stuff_1);
+				
 				case 2:
 				console.log(stuff_2);
+				
 				case 3:
 				console.log(stuff_3);
+				break;
+
 				default:
 				console.log("default");
 			}
