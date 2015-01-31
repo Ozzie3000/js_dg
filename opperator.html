@@ -55,7 +55,7 @@
   	<br /><br />
 
   	<label for="receiver">stuff_x</label>
-  	<input type="text" id="receiver" placeholder="stuff_x" title="replace x with a number 1 to 6">
+  	<input type="text" id="receiver" placeholder="pick a digit 1-6" title="replace x with a number 1 to 6">
   	<br /><br />
 
   	<textarea id="here"></textarea>
@@ -68,8 +68,13 @@
 			//console.log("test");
 			var holder = $("#receiver").val();
 			holder = parseInt(holder);
-			 var answer = "stuff_"+holder
-			$("#here").html(answer);
+			switch (holder){
+				case stuff_1:
+				console.log("s1");
+			}
+
+			
+			//$("#here").append(stuff_5);
 			//console.log(stuff_5 + " hi");
 		});
 
