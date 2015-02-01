@@ -36,7 +36,13 @@
 
 </script>
 <link rel="stylesheet" type="text/css" href="stylesheets/main1.css"></link>
-<style type="text/css"></style>
+<style type="text/css">
+	#here{
+		width: 400px;
+		height: 200px;
+		margin-left: 20px;
+	}
+</style>
 </head>
 <body>
 	<input type="button" id="rere" class="btn" value="Refreshness" onclick="location.reload();" />
@@ -65,7 +71,7 @@
 <script>
 	$(document).ready(function(){
 		var x;
-		$("#receiver").on("change", function(){
+		$("#receiver").on("change", function(x){
 			//console.log("test");
 			//var holder = $("#receiver").val();
 			//holder = parseInt(holder);
@@ -73,7 +79,7 @@
 				case "1":
 				console.log(stuff_1);
 				
-				case 2:
+				case x == 2:
 				console.log(stuff_2);
 				
 				case 3:
