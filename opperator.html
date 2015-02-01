@@ -70,16 +70,14 @@
 <script src="https://code.jquery.com/jquery-2.1.1.js"></script>
 <script>
 	$(document).ready(function(){
-		var x;
-		$("#receiver").on("change", function(x){
-			//console.log("test");
-			//var holder = $("#receiver").val();
-			//holder = parseInt(holder);
+		
+
+		function bob(x){
 			switch (x){
-				case "1":
+				case 1:
 				console.log(stuff_1);
 				
-				case x == 2:
+				case (x==2):
 				console.log(stuff_2);
 				
 				case 3:
@@ -89,10 +87,20 @@
 				default:
 				console.log("default");
 			}
+		};
+
+
+		$("#receiver").on("change", function(){
+			//console.log("test");
+			//var holder = $("#receiver").val();
+			//holder = parseInt(holder);
+			
 
 			
 			//$("#here").append(stuff_5);
 			//console.log(stuff_5 + " hi");
+			x = $("#receiver").val();
+			bob(x);
 		});
 
 	}); //end doc ready
