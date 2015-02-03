@@ -5,6 +5,9 @@
 <meta charset="utf-8">
 <meta name="description" content="HTML5, JS, jquery demos" />
 <script type="text/javascript">
+	var a; b = 4; c = 5; d = 6;
+  	function pr_1(){ a = b + c * d; return a;};
+  	function pr_2(){ a = (b + c) * d; return a;};
 </script>
 <link rel="stylesheet" type="text/css" href="stylesheets/main1.css"></link>
 <style type="text/css"></style>
@@ -15,9 +18,9 @@
   <h1>operator precedence</h1>
 
   <ul>
-  	<li>var a = 3; b = 4; c = 5; d = 6;</li>
-  	<li>a = b + c * d</li>
-  	<li>a = (b + c) * d</li>
+  	<li>var a; b = 4; c = 5; d = 6;</li>
+  	<li>a = b + c * d; yields 34</li>
+  	<li>a = (b + c) * d; yields 54</li>
   </ul>
 
 
