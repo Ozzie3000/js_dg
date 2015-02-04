@@ -24,6 +24,7 @@
   </ul>
 
   <br /><br />
+  <div id="receiver"></div>
 
 <script src="https://code.jquery.com/jquery-2.1.1.js"></script>
 <script>
@@ -31,8 +32,9 @@
 		function tell_time(){
 			var d = new Date;
 			var full_yeear = d.getFullYear();
-			$("#here").html("")
-		}
+			$("#receiver").html("<span id='here'> "+full_yeear+"</span>");
+		};
+		setTimeout(function(){ tell_time();},1);
 	}); //end doc ready
 </script>
 </body>
