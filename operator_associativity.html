@@ -16,7 +16,9 @@
 
   <ul>
   	<li>a = b - c - d; &nbsp; same as &nbsp; a = ((b-c) - z);</li>
-  	<li></li>
+  	<li>x = ~-y; &nbsp; same as &nbsp; x = ~(-y);</li>
+  	<li>a = b = c = d; &nbsp; same as &nbsp; a = (b = (c = d));</li>
+  	<li>z = a?b:c?d:e?f:g; &nbsp; same as &nbsp; z = a?b:(c?d:(e?f:g));</li>
   </ul>
 
 
