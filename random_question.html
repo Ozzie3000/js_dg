@@ -8,17 +8,22 @@
 	function randomizer(a,b){
 		var name = prompt("What is your name?");
 		var age = prompt("How old are you?");
+		var weird_sentence = name + " is freaking " + age;
+		document.getElementById("here").innerHTML = weird_sentence;
 	}
 </script>
 <link rel="stylesheet" type="text/css" href="stylesheets/main1.css"></link>
 <style type="text/css"></style>
 </head>
-<body>
+<body onload="randomizer();">
 	<input type="button" id="rere" class="btn" value="Refreshness" onclick="location.reload();" />
 	<br /><br />
   <h1></h1>
 
 
+  <div id="container">
+  	<span id="here" >&nbsp;</span>
+  </div>
 
 
 <script src="https://code.jquery.com/jquery-2.1.1.js"></script>
